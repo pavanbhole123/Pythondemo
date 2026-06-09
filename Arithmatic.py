@@ -1,0 +1,10 @@
+
+age=int(input('age: '))
+print('You are ' + str(age) + ' years old.')
+print("Addition is: " + str(age + 1))
+print("Subtraction is: " + str(age - 1))
+print("Multiplication is: " + str(age * 2))
+print("Division is: " + str(age / 2))
+print("Modulus is: " + str(age % 2))
+print("Floor Division is: " + str(age // 2))
+print("Exponentiation is: " + str(age ** 10))
