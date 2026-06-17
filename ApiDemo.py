@@ -1,11 +1,23 @@
 import requests
-name="Pavan"
-city="Pune"
-url="https://api.open-meteo.com/v1/forecast"
-params = {'latitude': 18.5204, 'longitude': 73.8567, 'current_weather': True}
-response = requests.get(url, params=params)
-if response.status_code == 200:
+
+def main():
+    url = "http://localhost:8000/users/6"
+    payload = {
+        "name": "Raj",
+        "city": "Bengaluru",
+        "email": "raj@example.com",
+        "age": 20,
+    }
+    headers = {"Content-Type": "application/json"}
+
+    
+    response = requests.put(url, json=payload, headers=headers, timeout=10)
+    response.raise_for_status()
+
     data = response.json()
-    print(f"Hello {name} from {city}!")
-    print("Current temperature of pune:")
-    print(data['current_weather']['temperature'])
+
+    print("Response:", data)
+
+
+if __name__ == "__main__":
+    main()
