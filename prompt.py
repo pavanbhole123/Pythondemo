@@ -126,4 +126,53 @@ e.g:-
 used in :- high stak holder response 
 
 
+
+#######Avoiding Halucintions & Prompt Optimization#######
+Technique1:- ASK FOR UNCERTAINITY
+Answer the question below. IF you are not 100% ceratin.
+say 'I dont know for sure' rather than guessing.
+Distingush between confirmed facts and your guesses.
+Question:-who won ipl in 2025 
+
+Technique2:- PROVIDE CONTEXT
+Based ONLY on the document below. answer the user's question.
+if the anwser is not in document say 'this documnet dont have this question'
+<document>
+
+</documnet>
+Question:-[user question]
+
+Technique3:- CITE SOURCES
+Answer the question for every claim , include a source 
+if you cannot cite the source mark it as unverified
+
+Technique4:- LOW TEMPREATURE FOR FACTS
+Lower tempreture is equals to correct answer this is apppicable on code only 
+
+Technique5:- ASK AI TO VERIFY
+step1:- Answer the question.
+Step2:- Review the answer. Are there any facts you are not 100% sure?
+step3:mark those facts with [verifed]
+step4:submit the final response
+question[user question]
+
+Technique6:-Structured QUESTION
+Bad:- tell me about kohli
+good:- when kohli won player of the decade award
+
+
+######Prompt Quality checklist
+1)Clear Role Assigned
+2)Specific TASK describe 
+3)Context given or not
+4)Explict contrains
+5)Desired format
+6)Example incuded or not
+7)Guardrils
+8)Uncertainty handling
+9)tested with atlest 3 inputs
+10)Edge consideration
+
+
+
 """
