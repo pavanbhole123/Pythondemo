@@ -38,12 +38,12 @@ while True:
     query_embedding = get_embeddings(query)
     #finding similarity
     scores = []
-
-for entry in store:
-    similarity = cosine_similarity(query_embedding, entry["embedding"])
-    text = entry["text"]
-    scores.append((similarity, text))
-    print("Similarity scores:", scores)``
+    for entry in store:
+        similarity = cosine_similarity(query_embedding, entry["embedding"])
+        text = entry["text"]
+        scores.append((similarity, text))
+        
+    print("Similarity scores:", scores)
     scores.sort(reverse=True)
     best_score,best_chunk = scores[0]
     print(f"Best match: {best_chunk} (Score: {best_score:.4f})")
